@@ -19,6 +19,7 @@ import retrofit2.Response;
 public class CustomerListActivity extends AppCompatActivity
 {
 
+    public static final String ss="name";
     RecyclerView customer_recycler;
     LinearLayoutManager llm;
     @Override

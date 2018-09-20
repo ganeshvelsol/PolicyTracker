@@ -5,6 +5,8 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
+import policytracker.simplytextile.policytracker.models.AgentList;
+
 /**
  * Created by Velsol 170016 on 9/18/2018.
  */
@@ -22,6 +24,20 @@ public class Data
     @SerializedName("totalrecords")
     @Expose
     private Integer totalrecords;
+
+
+
+    @SerializedName("agent_list")
+    @Expose
+    private List<AgentList> agentList = null;
+
+    public List<AgentList> getAgentList() {
+        return agentList;
+    }
+
+    public void setAgentList(List<AgentList> agentList) {
+        this.agentList = agentList;
+    }
 
     public List<CustomerList> getCustomer_list() {
         return customer_list;
