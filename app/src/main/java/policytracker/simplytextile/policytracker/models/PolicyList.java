@@ -18,33 +18,33 @@ public class PolicyList
     @SerializedName("customer")
     @Expose
     private Customer customer;
-    @SerializedName("agent")
-    @Expose
-    private Agent_ agent;
+//    @SerializedName("agent")
+//    @Expose
+//    private Agent_ agent;
     @SerializedName("company")
     @Expose
     private Company company;
-    @SerializedName("policy_type")
-    @Expose
-    private PolicyType_ policy_type;
-    @SerializedName("policy_type_sub")
-    @Expose
-    private PolicyTypeSub policy_type_sub;
-    @SerializedName("policy_status")
-    @Expose
-    private PolicyStatus policy_status;
-    @SerializedName("coverage_info")
-    @Expose
-    private CoverageInfo coverage_info;
+//    @SerializedName("policy_type")
+//    @Expose
+//    private PolicyType_ policy_type;
+//    @SerializedName("policy_type_sub")
+//    @Expose
+//    private PolicyTypeSub policy_type_sub;
+//    @SerializedName("policy_status")
+//    @Expose
+//    private PolicyStatus policy_status;
+//    @SerializedName("coverage_info")
+//    @Expose
+//    private CoverageInfo coverage_info;
     @SerializedName("renewal_info")
     @Expose
     private RenewalInfo renewal_info;
-    @SerializedName("premium_info")
-    @Expose
-    private PremiumInfo premium_info;
-    @SerializedName("insured_type")
-    @Expose
-    private InsuredType insured_type;
+//    @SerializedName("premium_info")
+//    @Expose
+//    private PremiumInfo premium_info;
+//    @SerializedName("insured_type")
+//    @Expose
+//    private InsuredType insured_type;
     @SerializedName("policy_number")
     @Expose
     private String policy_number;
@@ -66,9 +66,9 @@ public class PolicyList
     @SerializedName("grace_days")
     @Expose
     private Integer grace_days;
-    @SerializedName("more")
-    @Expose
-    private More____ more;
+//    @SerializedName("more")
+//    @Expose
+//    private More____ more;
     @SerializedName("update_counter")
     @Expose
     private Integer update_counter;
@@ -81,12 +81,12 @@ public class PolicyList
     @SerializedName("lapsation_date")
     @Expose
     private String lapsation_date;
-    @SerializedName("insured_info")
-    @Expose
-    private InsuredInfo insured_info;
-    @SerializedName("notification_info")
-    @Expose
-    private NotificationInfo notification_info;
+//    @SerializedName("insured_info")
+//    @Expose
+//    private InsuredInfo insured_info;
+//    @SerializedName("notification_info")
+//    @Expose
+//    private NotificationInfo notification_info;
     @SerializedName("beneficiary_information")
     @Expose
     private String beneficiary_information;
