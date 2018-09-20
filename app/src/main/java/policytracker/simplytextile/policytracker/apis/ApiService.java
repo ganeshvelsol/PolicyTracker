@@ -52,5 +52,10 @@ public interface ApiService
     Call<AgentsResponse> getAgents();
 
 
+    //api/policies
+    @Headers({"Content-Type:application/json"
+            ,"app_sid:84c57ae7bcba11e8be14aa3a52b410b4"})
+    @GET("api/policies")
+    Call<PoliciesResponse> getPolicies();
 
 }
