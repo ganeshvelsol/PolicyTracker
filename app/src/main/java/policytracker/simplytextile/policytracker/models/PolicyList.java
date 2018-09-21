@@ -93,4 +93,149 @@ public class PolicyList
     @SerializedName("last_update")
     @Expose
     private String last_update;
+
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    public Company getCompany() {
+        return company;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
+    }
+
+    public RenewalInfo getRenewal_info() {
+        return renewal_info;
+    }
+
+    public void setRenewal_info(RenewalInfo renewal_info) {
+        this.renewal_info = renewal_info;
+    }
+
+    public String getPolicy_number() {
+        return policy_number;
+    }
+
+    public void setPolicy_number(String policy_number) {
+        this.policy_number = policy_number;
+    }
+
+    public String getInsured_details() {
+        return insured_details;
+    }
+
+    public void setInsured_details(String insured_details) {
+        this.insured_details = insured_details;
+    }
+
+    public String getProduct_name() {
+        return product_name;
+    }
+
+    public void setProduct_name(String product_name) {
+        this.product_name = product_name;
+    }
+
+    public String getIdentifier() {
+        return identifier;
+    }
+
+    public void setIdentifier(String identifier) {
+        this.identifier = identifier;
+    }
+
+    public Integer getCommission_amount() {
+        return commission_amount;
+    }
+
+    public void setCommission_amount(Integer commission_amount) {
+        this.commission_amount = commission_amount;
+    }
+
+    public Object getParent_id() {
+        return parent_id;
+    }
+
+    public void setParent_id(Object parent_id) {
+        this.parent_id = parent_id;
+    }
+
+    public Integer getGrace_days() {
+        return grace_days;
+    }
+
+    public void setGrace_days(Integer grace_days) {
+        this.grace_days = grace_days;
+    }
+
+    public Integer getUpdate_counter() {
+        return update_counter;
+    }
+
+    public void setUpdate_counter(Integer update_counter) {
+        this.update_counter = update_counter;
+    }
+
+    public String getCreated() {
+        return created;
+    }
+
+    public void setCreated(String created) {
+        this.created = created;
+    }
+
+    public String getLast_updated() {
+        return last_updated;
+    }
+
+    public void setLast_updated(String last_updated) {
+        this.last_updated = last_updated;
+    }
+
+    public String getLapsation_date() {
+        return lapsation_date;
+    }
+
+    public void setLapsation_date(String lapsation_date) {
+        this.lapsation_date = lapsation_date;
+    }
+
+    public String getBeneficiary_information() {
+        return beneficiary_information;
+    }
+
+    public void setBeneficiary_information(String beneficiary_information) {
+        this.beneficiary_information = beneficiary_information;
+    }
+
+    public String getLast_update() {
+        return last_update;
+    }
+
+    public void setLast_update(String last_update) {
+        this.last_update = last_update;
+    }
 }
