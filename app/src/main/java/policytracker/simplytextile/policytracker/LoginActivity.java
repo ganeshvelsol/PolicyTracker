@@ -61,7 +61,7 @@ public class LoginActivity extends AppCompatActivity
 
         JSONObject subscriber_elements=new JSONObject();
         subscriber_elements.put("id", 12);
-        subscriber_elements.put("type_id", 38943);
+        subscriber_elements.put("type_id", 6501);
         subscriber_elements.put("business_name", "somesha");
         subscriber_elements.put("first_name", "somesha");
         subscriber_elements.put("last_name", "last_na");
@@ -78,7 +78,7 @@ public class LoginActivity extends AppCompatActivity
         child_elements1.put("city", "");
         child_elements1.put("state", "");
         child_elements1.put("zip", "");
-        child_elements1.put("email1", "rupesh.d.shah5@gmail.com");
+        child_elements1.put("email1", "sams@gmail.com");
         child_elements1.put("phone1", "5896321478");
 
         child_elements1.put("email2", "");
@@ -95,7 +95,7 @@ public class LoginActivity extends AppCompatActivity
         JSONArray company_list=new JSONArray();
 
         JSONObject array_values=new JSONObject();
-        array_values.put("id","250");
+        array_values.put("id","10056");
         array_values.put("act_date","");
         array_values.put("business_name","");
         array_values.put("license_number","");
