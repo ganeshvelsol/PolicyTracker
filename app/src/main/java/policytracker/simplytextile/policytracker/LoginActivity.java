@@ -57,7 +57,7 @@ public class LoginActivity extends AppCompatActivity
     {
         ApiService planView = ApiClient.getClient().create(ApiService.class);
 
-        JSONObject parent=new JSONObject();
+        final JSONObject parent=new JSONObject();
 
         JSONObject subscriber_elements=new JSONObject();
         subscriber_elements.put("id", 12);
@@ -65,21 +65,21 @@ public class LoginActivity extends AppCompatActivity
         subscriber_elements.put("business_name", "somesha");
         subscriber_elements.put("first_name", "somesha");
         subscriber_elements.put("last_name", "last_na");
-        subscriber_elements.put("aadhar_number", "963258741789");
-        subscriber_elements.put("govt_id_number", "12345");
+        subscriber_elements.put("aadhar_number", "");
+        subscriber_elements.put("govt_id_number", "");
         subscriber_elements.put("irdai_number", "");
 
 
 
         JSONObject child_elements1=new JSONObject();
-        child_elements1.put("address1", "1");
-        child_elements1.put("address2", "4384984938943");
-        child_elements1.put("address3", "somesha");
-        child_elements1.put("city", "somesha");
-        child_elements1.put("state", "last_na");
-        child_elements1.put("zip", "963258741789");
-        child_elements1.put("email1", "sams@gmail.com");
-        child_elements1.put("phone1", "9874561230");
+        child_elements1.put("address1", "");
+        child_elements1.put("address2", "");
+        child_elements1.put("address3", "");
+        child_elements1.put("city", "");
+        child_elements1.put("state", "");
+        child_elements1.put("zip", "");
+        child_elements1.put("email1", "rupesh.d.shah5@gmail.com");
+        child_elements1.put("phone1", "5896321478");
 
         child_elements1.put("email2", "");
         child_elements1.put("phone2", "");
@@ -104,9 +104,9 @@ public class LoginActivity extends AppCompatActivity
         JSONObject policy_type_list=new JSONObject();
 
         policy_type_list.put("id",5302);
-        policy_type_list.put("name","hello");
-        policy_type_list.put("description","description");
-        policy_type_list.put("parent_id","parent_id");
+        policy_type_list.put("name","");
+        policy_type_list.put("description","");
+        policy_type_list.put("parent_id","");
         policy_type_list.put("is_renewable",0);
 
         array_values.put("policy_type",policy_type_list);
@@ -128,12 +128,12 @@ public class LoginActivity extends AppCompatActivity
                 if (response.body().getStatuscode()==0)
                 {
                     Log.e("success",""+response.body().getStatuscode());
-                    Toast.makeText(LoginActivity.this, "success"+response.body().getData(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LoginActivity.this, ""+response.body().getMessage(), Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    Log.e("success",""+response.body().getStatuscode());
-                    Toast.makeText(LoginActivity.this, "else case"+response.body().getData(), Toast.LENGTH_SHORT).show();
+                    Log.e("success",""+parent.toString());
+                    Toast.makeText(LoginActivity.this, "else case"+response.body().getStatuscode(), Toast.LENGTH_SHORT).show();
                 }
             }
 

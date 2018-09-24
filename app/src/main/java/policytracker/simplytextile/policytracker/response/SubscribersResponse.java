@@ -15,9 +15,9 @@ public class SubscribersResponse
     @SerializedName("message")
     @Expose
     private String message;
-    @SerializedName("data")
-    @Expose
-    private Data data;
+//    @SerializedName("data")
+//    @Expose
+//    private Data data;
 
     public Integer getStatuscode() {
         return statuscode;
@@ -35,11 +35,11 @@ public class SubscribersResponse
         this.message = message;
     }
 
-    public Data getData() {
-        return data;
-    }
-
-    public void setData(Data data) {
-        this.data = data;
-    }
+//    public Data getData() {
+//        return data;
+//    }
+//
+//    public void setData(Data data) {
+//        this.data = data;
+//    }
 }
