@@ -9,8 +9,10 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+
 import com.google.gson.JsonArray;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -55,40 +57,69 @@ public class LoginActivity extends AppCompatActivity
     {
         ApiService planView = ApiClient.getClient().create(ApiService.class);
 
+        JSONObject parent=new JSONObject();
+
+        JSONObject subscriber_elements=new JSONObject();
+        subscriber_elements.put("id", 12);
+        subscriber_elements.put("type_id", 38943);
+        subscriber_elements.put("business_name", "somesha");
+        subscriber_elements.put("first_name", "somesha");
+        subscriber_elements.put("last_name", "last_na");
+        subscriber_elements.put("aadhar_number", "963258741789");
+        subscriber_elements.put("govt_id_number", "12345");
+        subscriber_elements.put("irdai_number", "");
 
 
 
-        JsonArray citiesArray = new JsonArray();
+        JSONObject child_elements1=new JSONObject();
+        child_elements1.put("address1", "1");
+        child_elements1.put("address2", "4384984938943");
+        child_elements1.put("address3", "somesha");
+        child_elements1.put("city", "somesha");
+        child_elements1.put("state", "last_na");
+        child_elements1.put("zip", "963258741789");
+        child_elements1.put("email1", "sams@gmail.com");
+        child_elements1.put("phone1", "9874561230");
 
-        JSONObject paramObject = new JSONObject();
-        paramObject.put("subscriber", "");
-        paramObject.put("id", "12");
-        paramObject.put("type_id", "4384984938943");
-        paramObject.put("business_name", "somesha");
-        paramObject.put("first_name", "somesha");
-        paramObject.put("last_name", "last_na");
-        paramObject.put("aadhar_number", "963258741789");
-        paramObject.put("govt_id_number", "12345");
-        paramObject.put("irdai_number", "");
-        paramObject.put("address", "");
-        paramObject.put( "address1","hyd");
-        paramObject.put("address2","wgl");
-        paramObject.put("address3","wgl");
-        paramObject.put("city","ss");
-        paramObject.put("state","telangana");
-        paramObject.put("zip","503621");
-        paramObject.put("email1","vv@gmail.com");
-        paramObject.put("phone1","9874563217");
-        paramObject.put("email2","");
-        paramObject.put( "phone2","");
-        paramObject.put("address", citiesArray);
-        paramObject.put("login_name", "sam");
-        paramObject.put("password", "2222");
-        citiesArray.add("company_list");
-        paramObject.put("company_list",citiesArray);
+        child_elements1.put("email2", "");
+        child_elements1.put("phone2", "");
+
+        subscriber_elements.put("address",child_elements1);
+
+        JSONObject user_detils=new JSONObject();
+        user_detils.put("login_name","name");
+        user_detils.put("password","name");
+
+        subscriber_elements.put("user",user_detils);
+
+        JSONArray company_list=new JSONArray();
+
+        JSONObject array_values=new JSONObject();
+        array_values.put("id","250");
+        array_values.put("act_date","");
+        array_values.put("business_name","");
+        array_values.put("license_number","");
 
 
-        Call<SubscribersResponse> da=planView.getUser(paramObject.toString());
+        JSONObject policy_type_list=new JSONObject();
+
+        policy_type_list.put("id",5302);
+        policy_type_list.put("name","hello");
+        policy_type_list.put("description","description");
+        policy_type_list.put("parent_id","parent_id");
+        policy_type_list.put("is_renewable",0);
+
+        array_values.put("policy_type",policy_type_list);
+        company_list.put(array_values);
+
+
+
+        subscriber_elements.put("company_list",company_list);
+
+        parent.put("subscriber",subscriber_elements);
+
+
+        Call<SubscribersResponse> da=planView.getUser(parent.toString());
         da.enqueue(new Callback<SubscribersResponse>()
         {
             @Override
