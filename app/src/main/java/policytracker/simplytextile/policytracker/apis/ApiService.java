@@ -35,8 +35,7 @@ public interface ApiService
 //     Call<List<CompanyList>> getCompany(Callback<List<CompanyList>> successs);
 
     @Headers("Content-Type:application/json")
-    @POST("api/subscribers")
-
+    @POST("api/subscribers/")
     Call<SubscribersResponse> getUser(@Body String body);
 
 
