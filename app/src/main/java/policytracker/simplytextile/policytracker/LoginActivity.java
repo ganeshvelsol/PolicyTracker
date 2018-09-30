@@ -92,34 +92,56 @@ public class LoginActivity extends AppCompatActivity
 
         subscriber_elements.put("user",user_detils);
 
-        JSONArray company_list=new JSONArray();
+
+//        JSONArray company=new JSONArray();
+//
+//        JSONObject array_values=new JSONObject();
+//
+//        JSONObject policy_type_list=new JSONObject();
+//
+//        array_values.put("id","10056");
+//        array_values.put("act_date","");
+//        array_values.put("business_name","");
+//        array_values.put("license_number","");
+//
+//
+//        policy_type_list.put("id",5302);
+//        policy_type_list.put("name","");
+//        policy_type_list.put("description","");
+//        policy_type_list.put("parent_id","");
+//        policy_type_list.put("is_renewable",0);
+//
+//        array_values.put("policy_type",policy_type_list);
+//        company.put(array_values);
+        JSONObject policy_type_object =new JSONObject();
+        policy_type_object.put("id",5302);
+        policy_type_object.put("name","");
+        policy_type_object.put("description","");
+        policy_type_object.put("parent_id","");
+        policy_type_object.put("is_renewable",0);
+
 
         JSONObject array_values=new JSONObject();
         array_values.put("id","10056");
         array_values.put("act_date","");
         array_values.put("business_name","");
         array_values.put("license_number","");
+        array_values.put("policy_type",policy_type_object);
 
-
-        JSONObject policy_type_list=new JSONObject();
-
-        policy_type_list.put("id",5302);
-        policy_type_list.put("name","");
-        policy_type_list.put("description","");
-        policy_type_list.put("parent_id","");
-        policy_type_list.put("is_renewable",0);
-
-        array_values.put("policy_type",policy_type_list);
-        company_list.put(array_values);
+        JSONArray jarray=new JSONArray();
+        jarray.put(array_values);
 
 
 
-        subscriber_elements.put("company_list",company_list);
+
+
+
+        subscriber_elements.put("company_list",jarray);
 
         parent.put("subscriber",subscriber_elements);
 
 
-        Call<SubscribersResponse> da=planView.getUser(parent.toString());
+        Call<SubscribersResponse> da=planView.getUser(parent);
         da.enqueue(new Callback<SubscribersResponse>()
         {
             @Override
@@ -132,8 +154,8 @@ public class LoginActivity extends AppCompatActivity
                 }
                 else
                 {
-                    Log.e("success",""+parent.toString());
-                    Toast.makeText(LoginActivity.this, "else case"+response.body().getStatuscode(), Toast.LENGTH_SHORT).show();
+                    Log.e("success",""+parent);
+                    Toast.makeText(LoginActivity.this, "else case"+response.body().getMessage(), Toast.LENGTH_SHORT).show();
                 }
             }
 

@@ -1,5 +1,7 @@
 package policytracker.simplytextile.policytracker.apis;
 
+import org.json.JSONObject;
+
 import java.util.List;
 
 import policytracker.simplytextile.policytracker.activities.CustomerListActivity;
@@ -36,7 +38,7 @@ public interface ApiService
 
     @Headers("Content-Type:application/json")
     @POST("api/subscribers/")
-    Call<SubscribersResponse> getUser(@Body String body);
+    Call<SubscribersResponse> getUser(@Body JSONObject jobject);
 
 
    @Headers({"Content-Type:application/json"
